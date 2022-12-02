@@ -9,15 +9,61 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-DICOM (digital imaging and communication)    
+Packages  
+```{r}
+
+library(oro.dicom)
+library(oro.nifti)
+library(imager)
+library(imagine)
+#library(CIMg)
+
+```
+
+
+## DICOM (digital imaging and communication)    
 Standardized representation of images  
 Format from scanner or hospital PACS (Picture Archiving and Communication)    
 2 Components  
 - Image data in pixels  
-- header (metadata: info about data)
+- header (metadata: info about data)  
+
+Pixel data is a matrix with a fixed number of rows and columns  
+1 DICOM file = one slice of the brain  
+
+```{r}
+
+#path1<-"~/Data/BRAINIX/DICOM/FLAIR"
+#path2<-"~/Data/BRAINIX/DICOM/FLAIR"
+#path3<-"~/Data/BRAINIX/DICOM/FLAIR"
+#slice<-readDICOMFile("X:/X-Files/R Projects/Playground/Neurohacking/MRI-Neurohack/Data/BRAINIX/DICOM/FLAIR/IM-0001-0001.dcm")
+#X:\X-Files\R Projects\Playground\Neurohacking\MRI-Neurohack
+
+```
 
 
 ```{r}
 
+#d<-dim(t(slice$img[[1]]))
+#image(1:d[1],1:d[2],t(slice$img[[1]]),col=gray(0:64/64))
 
 ```
+
+
+DICOM  
+```{r}
+
+#allone<-readDICOM("Y:/Y-Files/Y-Datasets/MRI/Hybrid #Dataset/LiverwLesionsII/Liver-001_1.3.6.1.4.1.9590.100.1.2.36423839435553950626680788651426579845")
+
+```
+
+```{r}
+
+
+grop<-readNIfTI("Y:/Y-Files/Y-Datasets/100micron/16/Synthesized_FLASH25_100um.nii")
+trutr<-grop@.Data
+plot(trutr[1:1263,1:1651])
+
+
+```
+
