@@ -1,0 +1,23 @@
+---
+title: "Data structures"
+author: "sanmi"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+DICOM (digital imaging and communication)    
+Standardized representation of images  
+Format from scanner or hospital PACS (Picture Archiving and Communication)    
+2 Components  
+- Image data in pixels  
+- header (metadata: info about data)
+
+
+```{r}
+
+
+```
